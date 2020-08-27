@@ -1,0 +1,32 @@
+ 
+ 
+    <div class="form-group">
+       <input type="text" #in class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Gıda Ara">
+     </div>
+    
+    <button  class="btn btn-primary float-right mb-5" (click)="ara(in.value)">Tarif Ara</button>
+ 
+ 
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="Resim">Resim</th>
+        <th scope="col">Başlık</th>
+        <th scope="col">İçindekiler</th>
+        <th scope="col">Tarif Sitesi</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of items">
+       <td>
+        <img [src]="item.thumbnail">
+       </td> 
+         <td>{{item.title}}</td>
+        <td>{{item.ingredients}}}</td>
+        <td><a [href]="item.href"> Tarif Sitesi </a></td>
+      </tr>
+    
+    </tbody>
+  </table>
+
+ 
